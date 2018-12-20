@@ -1,0 +1,53 @@
+{
+    "schemaVersion": "1.0.0",
+    "configType": "service",
+    "type": "rapid-health",
+    "environments": {
+        "Default": {
+            "connectionOptions": {
+                "strictSSL": false,
+                "headers": {},
+                "querystring": {}
+            },
+            "authentication": {
+                "type": "Basic",
+                "credentials": {
+                    "username": "pokitdok-username",
+                    "password": "pokitdok-password",
+                    "mapTo": {
+                        "decode": false
+                    }
+                },
+                "loginOptions": {
+                    "type": "noLogin",
+                    "headers": {},
+                    "querystring": {},
+                    "body": {}
+                }
+            },
+            "mapping": {
+                "Plans": {
+                    "sourceObject": {
+                        "primaryKey": {
+                            "type": "not specified",
+                            "name": ""
+                        },
+                        "endpoint": "/plans/",
+                        "querystring": {},
+                        "headers": {},
+                        "composedPrimaryKeys": {}
+                    },
+                    "fields": [],
+                    "methods": {
+                        "getByQuery": {
+                            "isEnabled": true
+                        },
+                        "getCountByQuery": {
+                            "isEnabled": false
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

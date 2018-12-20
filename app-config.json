@@ -1,0 +1,21 @@
+{
+    "schemaVersion": "1.0.0",
+    "configType": "application",
+    "settings": {
+        "realtime": {
+            "enabled": false
+        }
+    },
+    "environments": {
+        "Integration": "file::./environments/Integration/Integration.json"
+    },
+    "services": {
+        "Providers": "file::./services/Providers.json",
+        "PD-PHC#3": "file::./services/PD-PHC#3.json",
+        "Eligibility": "file::./services/Eligibility.json",
+        "FAD": "file::./services/FAD.json",
+        "oop-widget": "file::./services/oop-widget.json",
+        "oop-widget-ext": "file::./services/oop-widget-ext.json",
+        "Plans": "file::./services/Plans.json"
+    }
+}

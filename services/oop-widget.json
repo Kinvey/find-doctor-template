@@ -1,0 +1,11 @@
+{
+    "schemaVersion": "1.0.0",
+    "configType": "service",
+    "type": "flex-internal",
+    "environments": {
+        "Default": {
+            "secret": "regenerate your own secret",
+			"sourcePath": "./oop-widget"
+        }
+    }
+}

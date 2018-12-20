@@ -1,0 +1,86 @@
+{
+    "schemaVersion": "1.0.0",
+    "configType": "environment",
+    "settings": {
+        "apiVersion": 3
+    },
+    "collections": {
+        "Providers": {
+            "type": "internal",
+            "permissions": {
+                "all-users": {
+                    "create": "always",
+                    "read": "grant",
+                    "update": "entity",
+                    "delete": "entity"
+                }
+            }
+        },
+        "Plans": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "Eligibility": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "Schedulers": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "Appointments": {
+            "type": "internal",
+            "permissions": {
+                "all-users": {
+                    "create": "always",
+                    "read": "grant",
+                    "update": "entity",
+                    "delete": "entity"
+                }
+            }
+        },
+        "InsuranceCompany": {
+            "type": "internal",
+            "permissions": {
+                "all-users": {
+                    "create": "always",
+                    "read": "grant",
+                    "update": "entity",
+                    "delete": "entity"
+                }
+            }
+        },
+        "Specialty": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "OOP": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "Services": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "MockProviders": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "_blob": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "user": {
+            "type": "internal",
+            "permissions": "shared"
+        }
+    },
+    "collectionHooks": {
+        "OOP": {
+            "onPreFetch": {
+                "type": "internal",
+                "codeFile": "./hooks/OOP/onPreFetch.js"
+            }
+        }
+    }
+}

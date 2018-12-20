@@ -23,7 +23,7 @@ The version should be "4.1.0-alpha.3"
 2. To create a new app based on the PHC template, invoke the following Kinvey CLI command:
 > kinvey app create "{name-of-app}" "{repo-download-folder}/app-config.json"
 
-At this point all the configuration that is needed for the PHC Template App should be working in the newly created app. Note, that data is not imported until you open the app in the console.
+At this point all the configuration that is needed for the Find a Doctor Template App should be working in the newly created app. Note, that data is not imported. JSON files with example data is included in this repo in the `import-data` folder and can be imported via the [Progress Health Cloud Console](https://healthcloud.kinvey.com).
 
 ### Generate Client App
 Install nativescript

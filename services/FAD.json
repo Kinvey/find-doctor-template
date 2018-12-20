@@ -1,0 +1,11 @@
+{
+    "schemaVersion": "1.0.0",
+    "configType": "service",
+    "type": "flex-external",
+    "environments": {
+        "Default": {
+            "secret": "cb6123d61f48729436d00d472e597c81880d0e39f7b23684e7b1e7f6774179fc3b2502ae13ca7d7504c076749b3ae186ef342b341d3c8ecc214c",
+            "host": "https://e1936740.ngrok.io"
+        }
+    }
+}

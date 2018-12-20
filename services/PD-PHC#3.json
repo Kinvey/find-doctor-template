@@ -1,0 +1,105 @@
+{
+    "schemaVersion": "1.0.0",
+    "configType": "service",
+    "type": "rapid-health",
+    "description": "Pokitdok connector for PHC Template #3",
+    "environments": {
+        "Default": {
+            "connectionOptions": {
+                "strictSSL": false,
+                "headers": {},
+                "querystring": {}
+            },
+            "authentication": {
+                "type": "Basic",
+                "credentials": {
+                    "username": "pokitdok-username",
+                    "password": "pokitdok-password",
+                    "mapTo": {
+                        "decode": false
+                    }
+                },
+                "loginOptions": {
+                    "type": "noLogin",
+                    "headers": {},
+                    "querystring": {},
+                    "body": {}
+                }
+            },
+            "mapping": {
+                "Schedule Appointment Types": {
+                    "sourceObject": {
+                        "primaryKey": {
+                            "type": "string",
+                            "name": "type"
+                        },
+                        "endpoint": "/schedule/appointmenttypes",
+                        "querystring": {},
+                        "headers": {},
+                        "composedPrimaryKeys": {}
+                    },
+                    "fields": [],
+                    "methods": {
+                        "getAll": {
+                            "isEnabled": true
+                        },
+                        "getById": {
+                            "isEnabled": false
+                        },
+                        "getCount": {
+                            "isEnabled": false
+                        }
+                    }
+                },
+                "Schedule Appointment Types2": {
+                    "sourceObject": {
+                        "primaryKey": {},
+                        "endpoint": "/schedule/appointmenttypes",
+                        "querystring": {},
+                        "headers": {},
+                        "composedPrimaryKeys": {}
+                    },
+                    "fields": [],
+                    "methods": {
+                        "getAll": {
+                            "isEnabled": true
+                        },
+                        "getById": {
+                            "isEnabled": true
+                        },
+                        "getCount": {
+                            "isEnabled": true
+                        }
+                    }
+                },
+                "Schedule Appointments": {
+                    "sourceObject": {
+                        "primaryKey": {},
+                        "endpoint": "/schedule/appointments/",
+                        "querystring": {},
+                        "headers": {},
+                        "composedPrimaryKeys": {}
+                    },
+                    "fields": [],
+                    "methods": {
+                        "getAll": {
+                            "isEnabled": true
+                        },
+                        "getById": {
+                            "isEnabled": true
+                        },
+                        "update": {
+                            "isEnabled": true
+                        },
+                        "deleteById": {
+                            "isEnabled": true
+                        },
+                        "getCount": {
+                            "isEnabled": true
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,185 @@
+{
+    "schemaVersion": "1.0.0",
+    "configType": "environment",
+    "settings": {
+        "emailVerification": {
+            "auto": false,
+            "required": false
+        },
+        "apiVersion": 3
+    },
+    "collections": {
+        "Plans": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "Schedulers": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "Appointments": {
+            "type": "internal",
+            "permissions": {
+                "all-users": {
+                    "create": "always",
+                    "read": "grant",
+                    "update": "entity",
+                    "delete": "entity"
+                }
+            }
+        },
+        "InsuranceCompany": {
+            "type": "internal",
+            "permissions": {
+                "all-users": {
+                    "create": "always",
+                    "read": "grant",
+                    "update": "entity",
+                    "delete": "entity"
+                }
+            }
+        },
+        "Specialty": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "OOP": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "_blob": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "user": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "RapidHealthProviders": {
+            "type": "external",
+            "service": "Providers",
+            "serviceObject": "Providers",
+            "permissions": {
+                "all-users": {
+                    "create": "always",
+                    "read": "grant",
+                    "update": "entity",
+                    "delete": "entity"
+                }
+            }
+        },
+        "RapidHealthEligibility": {
+            "type": "external",
+            "service": "Eligibility",
+            "serviceObject": "Eligibility",
+            "permissions": {
+                "all-users": {
+                    "create": "always",
+                    "read": "grant",
+                    "update": "entity",
+                    "delete": "entity"
+                }
+            }
+        },
+        "oop-service-cost": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "health-plan": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "oop-widget": {
+            "type": "external",
+            "service": "oop-widget",
+            "serviceObject": "oop",
+            "permissions": {
+                "all-users": {
+                    "create": "always",
+                    "read": "grant",
+                    "update": "entity",
+                    "delete": "entity"
+                }
+            }
+        },
+        "oop-services": {
+            "type": "external",
+            "service": "oop-widget",
+            "serviceObject": "services",
+            "permissions": {
+                "all-users": {
+                    "create": "always",
+                    "read": "grant",
+                    "update": "entity",
+                    "delete": "entity"
+                }
+            }
+        },
+        "plan-benefit": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "RapidHealthProviderErrors": {
+            "type": "internal",
+            "permissions": {
+                "all-users": {
+                    "create": "always",
+                    "read": "grant",
+                    "update": "entity",
+                    "delete": "entity"
+                }
+            }
+        },
+        "EmailConfiguration": {
+            "type": "internal",
+            "permissions": "shared"
+        },
+        "Eligibility": {
+            "type": "external",
+            "service": "Eligibility",
+            "serviceObject": "Eligibility",
+            "permissions": {
+                "all-users": {
+                    "create": "always",
+                    "read": "grant",
+                    "update": "entity",
+                    "delete": "entity"
+                }
+            }
+        },
+        "RapidHealthPlans": {
+            "type": "external",
+            "service": "Plans",
+            "serviceObject": "Plans",
+            "permissions": {
+                "all-users": {
+                    "create": "always",
+                    "read": "grant",
+                    "update": "entity",
+                    "delete": "entity"
+                }
+            }
+        }
+    },
+    "collectionHooks": {
+        "OOP": {
+            "onPreFetch": {
+                "type": "internal",
+                "codeFile": "./hooks/OOP/onPreFetch.js"
+            }
+        },
+        "RapidHealthProviderErrors": {
+            "onPostSave": {
+                "type": "internal",
+                "codeFile": "./hooks/RapidHealthProviderErrors/onPostSave.js"
+            }
+        }
+    },
+    "customEndpoints": {
+        "myendpoint": {
+            "type": "external",
+            "service": "oop-widget",
+            "handlerName": "getDeductibles"
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "schemaVersion": "1.0.0",
+    "configType": "service",
+    "type": "rapid-health",
+    "environments": {
+        "Default": {
+            "connectionOptions": {
+                "strictSSL": false,
+                "headers": {},
+                "querystring": {}
+            },
+            "authentication": {
+                "type": "Basic",
+                "credentials": {
+                    "username": "pokitdok-username",
+                    "password": "pokitdok-password",
+                    "mapTo": {
+                        "decode": false
+                    }
+                },
+                "loginOptions": {
+                    "type": "noLogin",
+                    "headers": {},
+                    "querystring": {},
+                    "body": {}
+                }
+            },
+            "mapping": {
+                "Eligibility": {
+                    "sourceObject": {
+                        "primaryKey": {},
+                        "endpoint": "/eligibility/",
+                        "querystring": {},
+                        "headers": {},
+                        "composedPrimaryKeys": {}
+                    },
+                    "fields": [],
+                    "methods": {
+                        "insert": {
+                            "isEnabled": true
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
