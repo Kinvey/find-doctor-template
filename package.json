@@ -1,0 +1,31 @@
+{
+  "name": "find-doctor-template",
+  "version": "1.0.0",
+  "description": "This Progress Health Cloud package helps you generate your backend app for the \"Find a Doctor\" App Template.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kinvey/find-doctor-template.git"
+  },
+  "keywords": [
+    "telerik",
+    "mobile",
+    "nativescript",
+    "{N}",
+    "tns",
+    "appbuilder",
+    "template",
+    "kinvey",
+    "healthcare",
+    "category-healthcare"
+  ],
+  "author": "Patrick Holloway",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Kinvey/find-doctor-template/issues"
+  },
+  "homepage": "https://github.com/Kinvey/find-doctor-template#readme"
+}
