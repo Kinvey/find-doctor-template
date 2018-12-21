@@ -1,11 +1,10 @@
-#!/bin/zsh
-
+#!/bin/bash
 APPID=$2
 MASTERSECRET=$3
 
 TOKEN=openssl base64 -e <<< $(APPID):$(MASTERSECRET)
 
-for file in ./import-data/**.json
+for file in ../import-data/**.json
 do
   for row in $(echo "$(cat $file)" | jq -r '.[] | @base64'); do
     _jq() {
